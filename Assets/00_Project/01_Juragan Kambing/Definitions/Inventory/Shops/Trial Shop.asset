@@ -1,0 +1,34 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c12cb47451aa48247b42344cce5aa393, type: 3}
+  m_Name: Trial Shop
+  m_EditorClassIdentifier: 
+  m_Id: fg787
+  m_Label: Trial Shop
+  m_Description: 
+  m_Items:
+  - m_Definition: {fileID: 11400000, guid: 37a9430a6b3fb124889cee465a87ea76, type: 2}
+    m_Amount: 1
+  - m_Definition: {fileID: 11400000, guid: 18d7d52cd05918b4f834d4cfe13cf0b8, type: 2}
+    m_Amount: 1
+  m_AdditionalBuyPrice: []
+  m_BuyPriceRate: []
+  m_AdditionalSellPrice: []
+  m_SellPriceRate: []
+  m_FinalBuyPrice:
+    m_Definition: {fileID: 11400000, guid: 2769e561a3feb4e4ab92fdb9da5e9d55, type: 2}
+    m_SlotId: 
+    m_Amount: 20
+  m_FinalSellPrice:
+    m_Definition: {fileID: 11400000, guid: 2769e561a3feb4e4ab92fdb9da5e9d55, type: 2}
+    m_SlotId: 
+    m_Amount: 10

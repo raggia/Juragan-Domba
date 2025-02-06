@@ -1,0 +1,1 @@
+in ExampleCustomEvent you can  follow how to create new Chair

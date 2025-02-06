@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8ea00c275e5be3b47b125bb02e446306, type: 3}
+  m_Name: Demo Character Exp
+  m_EditorClassIdentifier: 
+  m_Id: g3yu452
+  m_Label: Demo Character Exp
+  m_Description: 
+  m_BaseStats:
+    m_StatList:
+    - m_Definition: {fileID: 11400000, guid: 9c11dbd31a0cc604b87fdd41dcf1202d, type: 2}
+      m_Value: 50
+  m_AddEachLevelStats:
+    m_StatList:
+    - m_Definition: {fileID: 11400000, guid: 9c11dbd31a0cc604b87fdd41dcf1202d, type: 2}
+      m_Value: 20
+  m_MultiplyEachLevelStats:
+    m_StatList:
+    - m_Definition: {fileID: 11400000, guid: 9c11dbd31a0cc604b87fdd41dcf1202d, type: 2}
+      m_Value: 1.1

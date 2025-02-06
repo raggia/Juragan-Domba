@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b7efc13ad7fe4f9438e803f8bc03eaa7, type: 3}
+  m_Name: Adventure Level
+  m_EditorClassIdentifier: 
+  m_Id: behb3rh3h
+  m_Label: Adventure Level
+  m_Description: 
+  m_Icon: {fileID: 21300000, guid: 5dd810b855ffa4143863ce50503b5b0a, type: 3}
+  m_StartExperience: 100
+  m_ExponentialGrowth: 1.3
+  m_MaxLevel: 30

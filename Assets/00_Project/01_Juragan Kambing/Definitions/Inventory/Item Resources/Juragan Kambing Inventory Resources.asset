@@ -1,0 +1,38 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1e2d19ae35db4d64db6114767551881b, type: 3}
+  m_Name: Juragan Kambing Inventory Resources
+  m_EditorClassIdentifier: 
+  m_Id: 
+  m_Label: 
+  m_Description: 
+  m_RegisteredItemDefinitions:
+  - {fileID: 11400000, guid: 105d40b2052e9e14c8e26ac2333b87a6, type: 2}
+  - {fileID: 11400000, guid: 6127f71f88f379f47a258de30da238f8, type: 2}
+  - {fileID: 11400000, guid: f8c58f038acd1c141bde2b3f4c9342e3, type: 2}
+  - {fileID: 11400000, guid: 9a891452d281998428ed085eef0f118d, type: 2}
+  - {fileID: 11400000, guid: 0015acf4b870a6f42a787f3205c9a6fa, type: 2}
+  - {fileID: 11400000, guid: 1f9f8ed7ef134e54cbb1ba4d8f4aeb03, type: 2}
+  - {fileID: 11400000, guid: 97407b7a77d5542489d1d7ec7c2c69bc, type: 2}
+  - {fileID: 11400000, guid: 5339ce33dc7f5a64ea9d998ddfe34afd, type: 2}
+  - {fileID: 11400000, guid: 21f01a57ddbc6d64eaaf4335a3ed0327, type: 2}
+  - {fileID: 11400000, guid: 4b18913b2e2848741b4707f64da555d6, type: 2}
+  - {fileID: 11400000, guid: 37a9430a6b3fb124889cee465a87ea76, type: 2}
+  - {fileID: 11400000, guid: 18d7d52cd05918b4f834d4cfe13cf0b8, type: 2}
+  - {fileID: 11400000, guid: 3e05d4a027992f544905a4f0c45d57a9, type: 2}
+  - {fileID: 11400000, guid: 2769e561a3feb4e4ab92fdb9da5e9d55, type: 2}
+  - {fileID: 11400000, guid: 0b36ce8e5d5b6fe419efa8c379eb9efd, type: 2}
+  m_StarterCurrencies:
+  - {fileID: 11400000, guid: 2769e561a3feb4e4ab92fdb9da5e9d55, type: 2}
+  - {fileID: 11400000, guid: 0b36ce8e5d5b6fe419efa8c379eb9efd, type: 2}
+  m_UnRegisteredItemDefinition: {fileID: 11400000, guid: 356cdc76cb3d2c547ab9858e1ad4c293, type: 2}
+  m_UnRegisteredCurrencyDefinition: {fileID: 11400000, guid: bbe7da92dba397348a5d3c63efed1cc6, type: 2}

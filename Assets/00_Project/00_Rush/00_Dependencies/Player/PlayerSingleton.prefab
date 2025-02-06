@@ -1,0 +1,110 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &6536111913335864811
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4866785963771362505}
+  - component: {fileID: 415150539896518145}
+  - component: {fileID: 8875536566619411043}
+  m_Layer: 0
+  m_Name: PlayerSingleton
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4866785963771362505
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6536111913335864811}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &415150539896518145
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6536111913335864811}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 03eeb2b9844788c45b1287c1e6db4db5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_InitializationTime: 0
+  m_Inventory: {fileID: 8875536566619411043}
+--- !u!114 &8875536566619411043
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6536111913335864811}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6e37b23fbef7d254d83ab5998f0f3477, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Id: 
+  m_RemoveItemWhenReachZero: 1
+  m_Currencies:
+  - m_Definition: {fileID: 11400000, guid: 2769e561a3feb4e4ab92fdb9da5e9d55, type: 2}
+    m_SlotId: 
+    m_Amount: 1000
+  - m_Definition: {fileID: 11400000, guid: 0b36ce8e5d5b6fe419efa8c379eb9efd, type: 2}
+    m_SlotId: 
+    m_Amount: 999
+  m_Items: []
+  m_OnCurrencyAmountChanged:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 11400000, guid: 20ac20eefbe055e49ab03b0dc859ee80, type: 2}
+        m_TargetAssemblyTypeName: Rush.NewEventTicketDefinition, Assembly-CSharp
+        m_MethodName: Execute
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  m_OnNewItemAdded:
+    m_PersistentCalls:
+      m_Calls: []
+  m_OnItemAmountChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_OnItemAmountCollected:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 11400000, guid: a4daf2f90fd3d1745b0686a5142236fc, type: 2}
+        m_TargetAssemblyTypeName: Rush.NewEventTicketDefinition, Assembly-CSharp
+        m_MethodName: Execute
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  m_OnItemRemoved:
+    m_PersistentCalls:
+      m_Calls: []

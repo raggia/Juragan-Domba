@@ -1,0 +1,263 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &4257769369281290919
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5165746065923497662}
+  - component: {fileID: 8480278808443313518}
+  - component: {fileID: 1272460889898173653}
+  - component: {fileID: 8157665746328524963}
+  m_Layer: 0
+  m_Name: AudioSingleton
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5165746065923497662
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4257769369281290919}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &8480278808443313518
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4257769369281290919}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b019d304064101f4e8d9e1c12a73e59d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_InitializationTime: 0
+  m_AudioSourceAsset:
+    m_AssetGUID: 5e740c0f943c687429998231ef313334
+    m_SubObjectName: 
+    m_SubObjectGUID: 
+    m_SubObjectType: 
+    m_EditorAssetChanged: 0
+  m_AudioSourceInstance: {fileID: 1272460889898173653}
+  m_Mixer: {fileID: 24100000, guid: 7e984f512e89b60468e829489e8883e3, type: 2}
+  m_AudioHandlers:
+  - rid: 5684334834362613856
+  - rid: 5684334834362613857
+  m_BGMField:
+    m_HomeBGM: {fileID: 8300000, guid: 4a74f61bf7075e8439f9a759ece2693f, type: 3}
+    m_CharCreationBGM: {fileID: 8300000, guid: 45c6539e9c07f5948b638b490a0d48b2, type: 3}
+  m_AudioField:
+    m_ButtonClick: {fileID: 8300000, guid: eee93e998efe24806a8ee64a4be7a67a, type: 3}
+  references:
+    version: 2
+    RefIds:
+    - rid: 5684334834362613856
+      type: {class: UIAudioHandler, ns: Rush, asm: Assembly-CSharp}
+      data:
+        m_ParameterName: UI
+        m_Group: {fileID: -3783893103257190392, guid: 7e984f512e89b60468e829489e8883e3, type: 2}
+        m_IsSpawn: 1
+        m_IsLoop: 0
+        m_AudioSources: []
+    - rid: 5684334834362613857
+      type: {class: BGMHandler, ns: Rush, asm: Assembly-CSharp}
+      data:
+        m_ParameterName: Music
+        m_Group: {fileID: -2273146209696275378, guid: 7e984f512e89b60468e829489e8883e3, type: 2}
+        m_IsSpawn: 0
+        m_IsLoop: 1
+        m_AudioSources: []
+--- !u!82 &1272460889898173653
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4257769369281290919}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_Resource: {fileID: 0}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+--- !u!114 &8157665746328524963
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4257769369281290919}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a0adb2f532b46343b9135b3a2805985, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Chairs:
+  - rid: 5684334834362613858
+  - rid: 5684334834362613859
+  - rid: 5684334834362613860
+  m_OnRegister:
+    m_PersistentCalls:
+      m_Calls: []
+  m_OnUnregister:
+    m_PersistentCalls:
+      m_Calls: []
+  references:
+    version: 2
+    RefIds:
+    - rid: 5684334834362613858
+      type: {class: AudiClipChair, ns: Rush, asm: Assembly-CSharp}
+      data:
+        m_EventTicket: {fileID: 11400000, guid: e901a7d1c04ebc543b1e179e5f83d0f2, type: 2}
+        m_OnRegister:
+          m_PersistentCalls:
+            m_Calls:
+            - m_Target: {fileID: 8480278808443313518}
+              m_TargetAssemblyTypeName: Rush.AudioSingleton, Assembly-CSharp
+              m_MethodName: PlayBGM
+              m_Mode: 0
+              m_Arguments:
+                m_ObjectArgument: {fileID: 0}
+                m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+                m_IntArgument: 0
+                m_FloatArgument: 0
+                m_StringArgument: 
+                m_BoolArgument: 0
+              m_CallState: 2
+    - rid: 5684334834362613859
+      type: {class: TransformChair, ns: Rush, asm: Assembly-CSharp}
+      data:
+        m_EventTicket: {fileID: 11400000, guid: 4353281e337d7c04687d45b2c9cf79eb, type: 2}
+        m_OnRegister:
+          m_PersistentCalls:
+            m_Calls:
+            - m_Target: {fileID: 8480278808443313518}
+              m_TargetAssemblyTypeName: Rush.AudioSingleton, Assembly-CSharp
+              m_MethodName: PlayButtonClick
+              m_Mode: 1
+              m_Arguments:
+                m_ObjectArgument: {fileID: 0}
+                m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+                m_IntArgument: 0
+                m_FloatArgument: 0
+                m_StringArgument: 
+                m_BoolArgument: 0
+              m_CallState: 2
+    - rid: 5684334834362613860
+      type: {class: VoidChairField, ns: Rush, asm: Assembly-CSharp}
+      data:
+        m_EventTicket: {fileID: 11400000, guid: 4724a7fddd55e154c9f3ce0de36ecef3, type: 2}
+        m_OnRegister:
+          m_PersistentCalls:
+            m_Calls:
+            - m_Target: {fileID: 8480278808443313518}
+              m_TargetAssemblyTypeName: Rush.AudioSingleton, Assembly-CSharp
+              m_MethodName: StopBGM
+              m_Mode: 1
+              m_Arguments:
+                m_ObjectArgument: {fileID: 0}
+                m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+                m_IntArgument: 0
+                m_FloatArgument: 0
+                m_StringArgument: 
+                m_BoolArgument: 0
+              m_CallState: 2
