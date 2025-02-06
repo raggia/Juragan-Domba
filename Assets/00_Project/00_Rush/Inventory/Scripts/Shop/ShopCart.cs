@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -5,6 +6,59 @@ namespace Rush
 {
     public partial class ShopCart : Inventory
     {
+        [SerializeField]
+        private ShopDefinition m_ShopDefi;
+        [SerializeField]
+        private CartState m_CartState = CartState.Buy;
+
+        public void SetState(CartState state)
+        {
+            m_CartState = state;
+        }
+        public void SetShopDefinition(ShopDefinition shopDefi)
+        {
+            m_ShopDefi = shopDefi;
+        }
+        protected override void OnItemAmountCollectedInvoke(IItem item)
+        {
+            base.OnItemAmountCollectedInvoke(item);
+
+            UpdatePrices();
+        }
+        protected override void OnItemRemovedInvoke(IItem item)
+        {
+            base.OnItemRemovedInvoke(item);
+
+            UpdatePrices();
+        }
+        private Currency GetFinalBuyPrice(Item item)
+        {
+            Currency currency = m_ShopDefi.GetFinalBuyPrice(item.Definition);
+
+            return currency;
+        }
+        private Currency GetFinalSellPrice(Item item)
+        {
+            Currency currency = m_ShopDefi.GetFinalSellPrice(item.Definition);
+
+            return currency;
+        }
+        private void UpdatePrices()
+        {
+            m_Currencies.Clear();
+            foreach (Item item in m_Items)
+            {
+                switch(m_CartState)
+                {
+                    case CartState.Buy:
+                        AddCurrencyAmountInternal(GetFinalBuyPrice(item));
+                        break;
+                    case CartState.Sell:
+                        AddCurrencyAmountInternal(GetFinalSellPrice(item));
+                        break;
+                }
+            }
+        }
         public void OnNewAddToCartListen(UnityAction<IItem> action)
         {
             m_OnNewItemAdded?.AddListener(action);
@@ -23,6 +77,11 @@ namespace Rush
             m_OnNewItemAdded?.RemoveAllListeners();
             m_OnItemAmountChanged?.RemoveAllListeners();
             m_OnItemRemoved?.RemoveAllListeners();
+        }
+
+        private bool CanBuy(List<Currency> payer)
+        {
+
         }
     }
 

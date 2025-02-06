@@ -27,7 +27,7 @@ namespace Rush
         private bool m_RemoveItemWhenReachZero = false;
 
         [SerializeField]
-        private List<Currency> m_Currencies = new();
+        protected List<Currency> m_Currencies = new();
         [SerializeField]
         protected List<Item> m_Items = new();
 
@@ -110,7 +110,7 @@ namespace Rush
         {
             AddCurrencyAmountInternal(currency);
         }
-        private void AddCurrencyAmountInternal(ICurrency currency)
+        protected void AddCurrencyAmountInternal(ICurrency currency)
         {
             if (m_Currencies.Contains(GetCurrencyInternal(currency.Id)))
             {
@@ -121,6 +121,10 @@ namespace Rush
         }
 
         public void SetCurrencyAmount(ICurrency currency)
+        {
+            SetCurrencyAmountInternal(currency);
+        }
+        public void SetCurrencyAmountInternal(ICurrency currency)
         {
             if (m_Currencies.Contains(GetCurrencyInternal(currency.Id)))
             {
@@ -159,31 +163,22 @@ namespace Rush
 
         private void AddItemInternal(IItem item)
         {
-            string slotId = "";
-            if (item.IsUniqueItem)
-            {
-                int random = Random.Range(-1000, 1000);
-                slotId = random.ToString();
-                //slotId = "";
-            }
-            Item newItem = new(item.Definition, slotId, item.Amount);
 
-            if (m_Items.Contains(GetItemInternal(newItem.Id)))
+            if (m_Items.Contains(GetItemInternal(item.Id)))
             {
-                GetItemInternal(newItem.Id).AddAmount(newItem.Amount);
-                OnItemAmountChangedInvoke(GetItemInternal(newItem.Id));
-                OnItemAmountCollectedInvoke(newItem);
+                GetItemInternal(item.Id).AddAmount(item.Amount);
+                OnItemAmountChangedInvoke(GetItemInternal(item.Id));
+                OnItemAmountCollectedInvoke(item);
             }
             else
             {
-
-                NewAddItemInternal(newItem);
+                NewAddItemInternal(item);
             }
 
             if (!m_RemoveItemWhenReachZero) return;
-            if (GetItemInternal(newItem.Id).Amount < 1)
+            if (GetItemInternal(item.Id).Amount < 1)
             {
-                RemoveItemInternal(newItem);
+                RemoveItemInternal(item);
             }
         }
         public void NewAddItem(IItem item)
@@ -213,17 +208,20 @@ namespace Rush
             RemoveItemInternal(item);
         }
 
+        // untuk item baru yang masuk
         protected virtual void OnNewItemAddedInvoke(IItem item)
         {
             m_OnNewItemAdded?.Invoke(item);
-            //GetInventoryUIView().AddItem(item);
             Debug.Log($"Add New Item {item.Label}, amount {item.Amount}");
         }
+
+        // untuk item yang sudah ada di inventory
         protected virtual void OnItemAmountChangedInvoke(IItem item)
         {
             m_OnItemAmountChanged?.Invoke(item);
             
         }
+        // untuk item yang sedang masuk ke inventory entah item baru atau sama
         protected virtual void OnItemAmountCollectedInvoke(IItem item)
         {
             m_OnItemAmountCollected?.Invoke(item);
